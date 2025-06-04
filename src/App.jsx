@@ -5,7 +5,10 @@ import viteLogo from '/vite.svg'
 import DiagonalSplitImages from './components/DiagonalSplitImages'
 import Navbar from './components/Navbar'
 import Intro from './components/Intro'
+import ProjectCard from './components/ProjectCard'
+import SlideInAction from './components/SlideInAction'
 import './App.css'
+import AnimatedCard from './components/AnimatedCard.jsx'
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
       <Navbar/>
       <DiagonalSplitImages />
       <Intro />
+      <ProjectCard />
+      {/* <SlideInAction /> */}
+      <AnimatedCard/>
     </div>
     </>
   )
