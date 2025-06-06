@@ -5,22 +5,20 @@ import viteLogo from '/vite.svg'
 import DiagonalSplitImages from './components/DiagonalSplitImages'
 import Navbar from './components/Navbar'
 import Intro from './components/Intro'
-import ProjectCard from './components/ProjectCard'
-import SlideInAction from './components/SlideInAction'
 import './App.css'
-import AnimatedCard from './components/AnimatedCard.jsx'
+import TiltCard from './components/TiltCard.jsx'
+import Projects from './components/Projects.jsx'
 
 function App() {
 
   return (
     <>
-    <div className='bg-[rgb(240,240,242)]'>
+    <div className='bg-[#f8f9fa] '>
       <Navbar/>
       <DiagonalSplitImages />
       <Intro />
-      <ProjectCard />
-      {/* <SlideInAction /> */}
-      <AnimatedCard/>
+      <Projects/>
+      {/* <TiltCard/> */}
     </div>
     </>
   )

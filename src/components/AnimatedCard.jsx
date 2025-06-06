@@ -14,7 +14,7 @@ const AnimatedCard = ({ title, subtitle, content }) => {
           {subtitle}
         </span>
         <h2 className="text-3xl font-bold mb-2 text-gray-800 font-sans">
-          {title.split("").map((char, index) =>
+          {title?.split("").map((char, index) =>
             char === " " ? " " : (
               <span key={index} className="bounce inline-block">{char}</span>
             )
