@@ -5,7 +5,9 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-900 flex justify-center overflow-hidden relative">
+    <div
+    id="skills"
+    className="w-full min-h-screen bg-gray-900 flex justify-center overflow-hidden relative">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-3xl"></div>
