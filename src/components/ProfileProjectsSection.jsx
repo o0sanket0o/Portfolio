@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import AnimatedTitle from './AnimatedTitle';
 import TiltCard from './TiltCard';
-
+import { title } from 'framer-motion/client';
 
 const ProfileProjectsSection = () => {
   const containerRef = useRef(null);
@@ -17,7 +17,6 @@ const ProfileProjectsSection = () => {
       if(isVisible && !visible) {
         setVisible(true);
       }
-
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -25,60 +24,84 @@ const ProfileProjectsSection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visible]);
 
-  // Sample project data
+  // Sample project data with images
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Authenticated Huffman Coding",
+      subtitle: "Command Line Application",
+      content: "This project implements Huffman encoding, a popular algorithm for data compression, along with a password protection mechanism.",
+      technologies: ["C", "Data Structures", "Encoding", "Algorithms"],
+      githubUrl: "https://github.com/o0sanket0o/Authenticated_Huffman_Coding",
+      liveUrl: null,
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    },
+    {
+      title: "DriveHive",
       subtitle: "Web Application",
-      content: "A full-stack e-commerce solution with user authentication, payment integration, and admin dashboard. Built with modern technologies for optimal performance.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      content: "A ride booking application that connects drivers and passengers, featuring real-time tracking, booking management, and user authentication.",
+      technologies: ["React.js", "Mongo DB", "Redux", "Express.js"],
+      githubUrl: "https://github.com/o0sanket0o/DriveHive",
+      liveUrl: "https://drive-hive.vercel.app/",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
     },
     {
-      title: "Task Management App",
-      subtitle: "Mobile App",
-      content: "Cross-platform mobile application for task management with real-time synchronization, team collaboration, and productivity analytics.",
-      technologies: ["React Native", "Firebase", "Redux"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    },
-    {
-      title: "AI Chatbot",
+      title: "Movie Recommendation System",
       subtitle: "Machine Learning",
-      content: "Intelligent chatbot powered by natural language processing, capable of handling customer inquiries and providing automated support.",
-      technologies: ["Python", "TensorFlow", "Flask", "NLP"],
-      githubUrl: "https://github.com",
-      liveUrl: null
+      content: "A machine learning-based movie recommendation system that suggests movies to users based on their preferences and viewing history.",
+      technologies: ["Python", "Machine Learning", "Pandas", "NumPy"],
+      githubUrl: "http://github.com/o0sanket0o/Movie_Recommendation_System",
+      liveUrl: null,
+      image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      title: "Portfolio Website",
-      subtitle: "Web Design",
-      content: "Modern, responsive portfolio website showcasing creative projects with smooth animations and interactive elements.",
-      technologies: ["Next.js", "Tailwind", "Framer Motion"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "Job Portal",
+      subtitle: "Web Application",
+      content: "A comprehensive job portal that connects job seekers with employers, featuring job listings, application tracking, and user profiles.",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
+      githubUrl: "https://github.com/o0sanket0o/Job-Portal",
+      liveUrl: null,
+      image: "https://images.unsplash.com/photo-1653566031535-bcf33e1c2893?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      title: "Data Visualization",
-      subtitle: "Analytics",
-      content: "Interactive dashboard for data visualization and analytics with real-time charts, filters, and export capabilities.",
-      technologies: ["D3.js", "React", "Express", "PostgreSQL"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "Blogify",
+      subtitle: "Blog Platform",
+      content: "A frontend blog platform that allows users to read blogs based on their interests, featuring a clean UI, smooth navigation, and responsive design.",
+      technologies: ["React.js", "Tailwind CSS", "API", "Responsive Design"],
+      githubUrl: "https://github.com/o0sanket0o/Blog_Project",
+      liveUrl: "https://blog-project-topaz-ten.vercel.app/",
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
     },
     {
-      title: "Crypto Tracker",
-      subtitle: "Finance App",
-      content: "Cryptocurrency tracking application with real-time price updates, portfolio management, and market analysis tools.",
-      technologies: ["Vue.js", "Node.js", "WebSocket", "API"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "GIF Generator",
+      subtitle: "Web Application",
+      content: "A web application that allows users to search for and generate GIFs based on keywords, featuring a user-friendly interface and smooth animations.",
+      technologies: ["React.js", "API", "CSS Animations", "Design"],
+      githubUrl: "https://github.com/o0sanket0o/GIF_Generator",
+      liveUrl: "https://gif-generator-smoky-alpha.vercel.app/",
+      image: "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    },
+    {
+      title: "Ecomzy",
+      subtitle: "E-commerce Frontend",
+      content: "A frontend e-commerce application that provides a seamless shopping experience, featuring product listings and cart management.",
+      technologies: ["React.js", "Redux", "Tailwind CSS", "Design"],
+      githubUrl: "https://github.com/o0sanket0o/Ecomzy",
+      liveUrl: "https://ecomzy-psi.vercel.app/",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    },
+    {
+      title: "RazorPay Clone Frontend",
+      subtitle: "Clone",
+      content: "A frontend clone of RazorPay, a popular payment gateway, featuring a similar user interface and functionality.",
+      technologies: ["HTML", "CSS", "JavaScript", "Design"],
+      githubUrl: "https://github.com/o0sanket0o/RazorPay-Clone",
+      liveUrl: null,
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
     }
   ];
 
   return (
-    <div className="relative w-full bg-gray-900 py-20">
+    <div id='projects' className="relative w-full bg-gray-900 py-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 

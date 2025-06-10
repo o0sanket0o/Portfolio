@@ -10,33 +10,33 @@ export default function Footer() {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://linkedin.com/in/sanket',
+      url: 'https://www.linkedin.com/in/sanket-chugh-6a52a4216/',
       color: 'hover:text-blue-400 hover:bg-blue-500/10'
     },
     {
       name: 'GitHub',
       icon: Github,
-      url: 'https://github.com/sanket',
+      url: 'https://github.com/o0sanket0o',
       color: 'hover:text-white hover:bg-gray-700'
     },
     {
       name: 'LeetCode',
       icon: Code,
-      url: 'https://leetcode.com/sanket',
+      url: 'https://leetcode.com/u/Sanket5955/',
       color: 'hover:text-orange-400 hover:bg-orange-500/10'
     },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      url: 'https://twitter.com/sanket',
-      color: 'hover:text-sky-400 hover:bg-sky-500/10'
-    },
-    {
-      name: 'Instagram',
-      icon: Instagram,
-      url: 'https://instagram.com/sanket',
-      color: 'hover:text-pink-400 hover:bg-pink-500/10'
-    }
+    // {
+    //   name: 'Twitter',
+    //   icon: Twitter,
+    //   url: 'https://twitter.com/sanket',
+    //   color: 'hover:text-sky-400 hover:bg-sky-500/10'
+    // },
+    // {
+    //   name: 'Instagram',
+    //   icon: Instagram,
+    //   url: 'https://instagram.com/sanket',
+    //   color: 'hover:text-pink-400 hover:bg-pink-500/10'
+    // }
   ];
 
   const quickLinks = [
@@ -70,6 +70,14 @@ export default function Footer() {
                 </p>
               </div>
               
+
+              {/* Status Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-gray-300 text-sm">Currently available for projects</span>
+              </div>
+            </div>
+
               {/* Social Links */}
               <div className="mb-8">
                 <h4 className="text-white font-semibold mb-4">Connect with me</h4>
@@ -78,6 +86,7 @@ export default function Footer() {
                     const Icon = social.icon;
                     return (
                       <div
+                        onClick={() => window.open(social.url, '_blank')}
                         key={social.name}
                         className={`group w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer ${social.color}`}
                         title={social.name}
@@ -88,20 +97,12 @@ export default function Footer() {
                   })}
                 </div>
               </div>
-
-              {/* Status Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-gray-300 text-sm">Currently available for projects</span>
-              </div>
-            </div>
-
             {/* Quick Links */}
-            <div>
+            {/* <div>
               <h4 className="text-white font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.name} >
                     <div className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer group flex items-center">
                       {link.name}
                       <ArrowUp className="w-4 h-4 ml-2 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -109,7 +110,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 

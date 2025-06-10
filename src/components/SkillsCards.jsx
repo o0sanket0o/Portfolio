@@ -1,49 +1,56 @@
 import React from 'react';
-import { Code, Database, Globe, Smartphone, Palette, Settings, Zap, Heart } from 'lucide-react';
+import { Code, Database, Globe, Smartphone, Palette, Settings, Zap, Heart, Cpu } from 'lucide-react';
 
 // Sample skills data - replace with your actual skills
+
 const skills = [
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Frontend Dev",
-    description: "Building responsive and interactive web applications with modern frameworks and libraries."
+    title: "Java & Spring Boot",
+    description: "Building robust backend applications and microservices using Java and Spring Boot framework."
   },
   {
     icon: <Database className="w-8 h-8" />,
-    title: "Backend Dev",
-    description: "Creating robust server-side applications and APIs with scalable architecture."
+    title: "Backend Development",
+    description: "Creating server-side applications and RESTful APIs with Express.js, Node.js, and Spring Boot."
   },
   {
     icon: <Globe className="w-8 h-8" />,
-    title: "Full Stack",
-    description: "End-to-end development from conception to deployment and maintenance."
-  },
-  {
-    icon: <Smartphone className="w-8 h-8" />,
-    title: "Mobile Dev",
-    description: "Cross-platform mobile applications with native performance and feel."
-  },
-  {
-    icon: <Palette className="w-8 h-8" />,
-    title: "UI/UX Design",
-    description: "Creating intuitive and beautiful user experiences through thoughtful design."
+    title: "Full Stack Development",
+    description: "End-to-end development from frontend to backend with React, Express, and database integration."
   },
   {
     icon: <Settings className="w-8 h-8" />,
-    title: "DevOps",
-    description: "Streamlining development workflows and deployment processes."
+    title: "System Design",
+    description: "Designing scalable and efficient system architectures for complex applications."
+  },
+  {
+    icon: <Code className="w-8 h-8" />,
+    title: "C/C++",
+    description: "Low-level programming, system design, and performance-critical applications development."
   },
   {
     icon: <Zap className="w-8 h-8" />,
-    title: "Performance",
-    description: "Optimizing applications for speed, efficiency, and user satisfaction."
+    title: "DSA & Problem Solving",
+    description: "Strong foundation in Data Structures, Algorithms, and solving complex computational problems."
   },
   {
-    icon: <Heart className="w-8 h-8" />,
-    title: "Problem Solving",
-    description: "Breaking down complex challenges into elegant, maintainable solutions."
-  }
+    icon: <Cpu className="w-8 h-8" />,
+    title: "CS Fundamentals",
+    description: "Deep understanding of Operating Systems, DBMS, Computer Networks, and OOP principles."
+  },
+  {
+    icon: <Code className="w-8 h-8" />,
+    title: "JavaScript/React",
+    description: "Developing responsive and interactive frontend applications with React.js and modern JavaScript."
+  },
+  {
+    icon: <Database className="w-8 h-8" />,
+    title: "Database Systems",
+    description: "Working with MongoDB, SQL databases, and Snowflake for data storage and analytics solutions."
+  },
 ];
+
 
 const SkillsCards = () => {
   const tiltAngles = [5, -3, 7, -5, 4, -6, 8, -4]; // Different tilt for each card

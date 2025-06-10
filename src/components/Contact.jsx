@@ -79,22 +79,11 @@ export default function Contact() {
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
                     <p className="text-white text-lg hover:text-blue-400 transition-colors duration-300 cursor-pointer">
-                      sanket@example.com
+                      sanketchugh5@gmail.com
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <p className="text-white text-lg hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                      +91 98765 43210
-                    </p>
-                  </div>
-                </div>
 
                 <div className="flex items-center group">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -180,7 +169,7 @@ export default function Contact() {
                         Sending...
                       </div>
                     ) : (
-                      <div className="flex items-center">
+                      <div className="flex cursor-pointer items-center">
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
                       </div>
