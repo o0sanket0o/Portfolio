@@ -39,7 +39,7 @@ const SectionTitle = ({ title, subtitle }) => {
           return (
             <span 
               key={index} 
-              className="inline-block hover:animate-bounce transition-transform duration-200 cursor-default"
+              className="inline-block hover:animate-bounce transition-transform duration-200 cursor-default hover:text-blue-400"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {char}
